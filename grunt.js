@@ -5,7 +5,8 @@ module.exports = function(grunt) {
         lint: {
             all: [
                 'grunt.js',
-                'application/**/*.js'
+                'application/**/*.js',
+                'test/**/*.js'
             ]
         },
         jshint: {
@@ -52,11 +53,11 @@ module.exports = function(grunt) {
                 almond: true,
                 replaceRequireScript: [{
                     files: ['test-build/test.html'],
-                    module: 'tests'
+                    module: 'test'
                 }],
                 modules: [{name: 'tests'}],
                 dir: 'test-build',
-                appDir: 'tests',
+                appDir: 'test',
                 baseUrl: './',
                 shim: {
                     'mocha': {
@@ -64,9 +65,6 @@ module.exports = function(grunt) {
                     },
                     'expect': {
                         exports: 'expect'
-                    },
-                    'keymaster': {
-                        exports: 'key'
                     },
                     'mocha_yeti': {
                         exports: 'BUNYIP'
@@ -98,12 +96,10 @@ module.exports = function(grunt) {
                     underscore:     '../application/jam/underscore/underscore',
                     backbone:       '../application/jam/backbone/backbone',
                     transparency:   '../application/jam/transparency/lib/transparency',
-                    keymaster:      '../appllication/jam/keymaster/keymaster',
                     models:         '../application/models',
                     collections:    '../application/collections',
                     templates:      '../application/templates',
                     views:          '../application/views',
-                    tools:          '../tools',
                     config:         'config'
                 },
                 pragmas: {
