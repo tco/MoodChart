@@ -16,8 +16,8 @@ create table team_person (
 	tid unsigned not null,
 	pid unsigned not null,
 	foreign key(tid) referenced team(id) on delete restrict,
-	foreign key(pid) referenced person(id) on delete restrict,
-)
+	foreign key(pid) referenced person(id) on delete restrict
+) default charset utf8;
 
 create table person_mood (
 	id int unsigned not null auto_increment,
