@@ -8,7 +8,7 @@ create table person (
 	id int unsigned not null auto_increment,
 	name varchar(255),
 	email varchar(255),
-	password varchar(32), 
+	password varchar(256), 
 	primary key(id)
 )
 
