@@ -8,9 +8,9 @@ create table person (
 	id int unsigned not null auto_increment,
 	name varchar(255),
 	email varchar(255),
-	password varchar(256), 
+	password varchar(64), 
 	primary key(id)
-)
+) default charset UTF-8;
 
 create table person_mood (
 	id int unsigned not null auto_increment,
@@ -19,4 +19,4 @@ create table person_mood (
 	pid int,
 	primary key(id),
 	foreign key(pid) references person(id) on delete restrict
-)
+) default charset UTF-8;
