@@ -1,17 +1,18 @@
 define(['backbone'], function(Backbone) {
     "use strict";
 
-    // User model
+    //  Person model
     // -----------
 
-    var User = Backbone.Model.extend({
-        name: 'User',
+    var Person = Backbone.Model.extend({
+        name: 'Person',
 
         initialize: function(data, options) {
+
         }
 
     });
 
-    return User;
+    return Person;
 
 });
