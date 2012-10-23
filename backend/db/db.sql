@@ -13,8 +13,10 @@ create table person (
 ) default charset utf8;
 
 create table team_person (
-	tid unsigned not null,
-	pid unsigned not null,
+	tid int unsigned not null,
+	pid int unsigned not null,
+	index tid,
+	index pid,
 	foreign key(tid) referenced team(id) on delete restrict,
 	foreign key(pid) referenced person(id) on delete restrict
 ) default charset utf8;
