@@ -14,12 +14,15 @@ require.config({
             //module value.
             exports: 'Backbone'
         },
+        'underscore.string': {
+            deps: ['underscore']
+        },
         'highcharts': {
             deps: ['jquery'],
             exports: 'Highcharts'
         },
         'collections': {
-            deps: ['models', 'config']
+            deps: ['models']
         },
         'views': {
             deps: ['transparency', 'collections']

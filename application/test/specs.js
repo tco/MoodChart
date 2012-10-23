@@ -1,4 +1,3 @@
 define('specs', [
-    'spec/MoodChart'
-
+    'spec/collections/collections'
 ], function() {});

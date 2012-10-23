@@ -1,5 +1,5 @@
 define('views', [
-    'lodash'
+    'underscore'
 ], function(_) {
 
     var key, views = {};
@@ -15,9 +15,6 @@ define('views', [
                 args.push(list[key]);
             });
 
-            for (key in arguments) {
-            }
-
             view = args.shift();
 
             function F(args) {
@@ -32,6 +29,7 @@ define('views', [
             if(!!views[name]) {
                 return views[name];
             }
+            return undefined;
         }
     };
 });

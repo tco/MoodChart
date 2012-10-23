@@ -24,7 +24,7 @@ require.config({
             exports: 'Backbone'
         },
         'collections': {
-            deps: ['models']
+            deps: ['models', 'config']
         },
         'views': {
             deps: ['transparency', 'collections']
@@ -32,17 +32,17 @@ require.config({
     },
     paths: {
         mocha_yeti:     'lib/mocha-yeti-adaptor',
-        specs:          'specs',
         mocha:          'lib/mocha',
         expect:         'lib/assertion/expect',
         jquery:         '../jam/jquery/jquery',
-        underscore:     '../jam/lodash/lodash',
+        underscore:     '../jam/underscore/underscore',
         backbone:       '../jam/backbone/backbone',
         transparency:   '../jam/transparency/lib/transparency',
         models:         '../models',
         collections:    '../collections',
         templates:      '../templates',
         views:          '../views',
+        specs:          'specs',
         config:         'config'
     }
 });

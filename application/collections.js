@@ -1,10 +1,13 @@
 define('collections', [
-    'lodash'
+    'underscore',
+    'collections/members',
+    'collections/teams'
 ], function(_) {
     var key, collections = {};
 
     _.each(arguments, function(value, key, list) {
-        collections[list[key].prototype.name] = list[key];
+        if(key === 0) return;
+        collections[list[key].prototype.name] = value;
     });
 
     return {
@@ -12,6 +15,7 @@ define('collections', [
             if(name in collections) {
                 return collections[name];
             }
+            return undefined;
         }
     };
 });
