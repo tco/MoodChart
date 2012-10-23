@@ -7,6 +7,8 @@ create table team (
 create table person (
 	id int unsigned not null auto_increment,
 	name varchar(255),
+	email varchar(255),
+	password varchar(32), 
 	primary key(id)
 )
 
