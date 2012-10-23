@@ -187,7 +187,7 @@ module.exports = function(grunt) {
     grunt.registerTask('test', 'testbuild mocha');
     grunt.registerTask('bunyiptest', 'testbuild bunyip:phantom clean');
 
-    grunt.registerTask('release', 'requirejs:release recess:release regen');
+    grunt.registerTask('release', 'requirejs:release');
 
     grunt.registerTask('default', 'lint bunyiptest release');
 
